@@ -1,0 +1,37 @@
+{
+    "instagram": {
+        "username": "username",
+        "password": "password"
+    },
+    "bots": [
+        {   
+            "username": "username",
+            "password": "password"
+        },
+        {   
+            "username": "username",
+            "password": "password"
+        },
+        {   
+            "username": "username",
+            "password": "password"
+        },
+        {   
+            "username": "username",
+            "password": "password"
+        },
+        {   
+            "username": "username",
+            "password": "password"
+        }
+    ],
+    "proxy": {
+        "enabled": false,
+        "hosts": [
+            "http://{proxy}:{port}",
+            "http://{proxy}:{port}",
+            "http://{proxy}:{port}",
+            "http://{proxy}:{port}"
+        ]
+    } 
+}
