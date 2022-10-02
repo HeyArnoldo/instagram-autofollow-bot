@@ -31,7 +31,9 @@ module.exports.InstagramClient = class InstagramClient {
           if(pendingFollows.length > 0) {
             pendingFollows.forEach(async (user) => {
               this.ig.friendship.approve(user.pk).then(() => console.log(`[ CLIENT / ${config.instagram.username} ] Pending Follow Approved: ${user.username}`));
-              await this.bots.follow(user.username);
+              try{
+                await this.bots.follow(user.username);
+              }catch(e){console.log(e)}
               this.getAccountData();
             });
           }else{
