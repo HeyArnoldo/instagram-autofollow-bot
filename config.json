@@ -4,15 +4,15 @@
         "password": "password"
     },
     "bots": [
-        {   
+        {
             "username": "username",
             "password": "password"
         },
-        {   
+        {
             "username": "username",
             "password": "password"
         },
-        {   
+        {
             "username": "username",
             "password": "password"
         },
@@ -33,5 +33,6 @@
             "http://{proxy}:{port}",
             "http://{proxy}:{port}"
         ]
-    } 
+    },
+    "timeout": 15
 }
