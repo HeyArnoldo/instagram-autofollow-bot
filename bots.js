@@ -16,16 +16,13 @@ module.exports.Bots = class Bots {
             });
         }catch(e){console.log("Ha ocurrido un error: " + e)}
     }
-    async follow(username) {
-        try {
+    async follow(id) {
             config.bots.forEach(async (bot) => {
-                this[bot.username].user.getIdByUsername(username).then((id) => {
-                    console.log(`[ BOT / ${bot.username} ] Following: ${username}`);
-                    this[bot.username].friendship.create(id);
-                });
+                try {
+                    await this[bot.username].friendship.create(id).then((res) => console.log(`[ BOT / ${bot.username} ] Following: ${res.username}`))
+                }catch (error) {
+                    console.log("Ha ocurrido un error: " + error);
+                }
             });
-        } catch (error) {
-            console.log("Ha ocurrido un error: " + error);
-        }
     }
 };  
